@@ -81,7 +81,7 @@
 ## 🔧 5. Ferramentas Utilizadas
 - **arp-scan:** Escaneia a rede LAN usando o protocolo ARP para descobrir dispositivos ativos
 - **Nmap:** Escaneia redes e hosts para identificar dispositivos, verificar portas abertas, detectar serviços e sistemas operacionais  
-- **Medusa:** rFerramenta para realizar ataques de força bruta rápidos e eficientes contra diversos serviços de rede, como HTTP, FTP, SSH, Telnet, POP3, IMAP, VNC, entre outros 
+- **Medusa:** Ferramenta para realizar ataques de força bruta rápidos e eficientes contra diversos serviços de rede, como HTTP, FTP, SSH, Telnet, POP3, IMAP, VNC, entre outros 
 - **enum4linux:** Para realizar enumeração de informações em sistemas operacionais Windows e Linux (que utilizam o Samba), para coletar dados sobre um alvo e identificar potenciais vulnerabilidades
 
 ---
@@ -91,7 +91,7 @@
 |----|-------|--------|-----------------|------------|--------|-------------|
 | V‑001 | 21 | FTP | Brute Force | Crítica | Confirmada | Exposição de dados |
 V‑002 | 80 | HTTP | Brute Force | Crítica | Confirmada | Exposição de dados |
-V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de dados |
+V‑003 | 445 | SMB | Ataque em Cadeia | Crítica | Confirmada | Exposição de dados |
 
 
 
@@ -99,7 +99,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
 
 ## 🕵️ 7. Detalhamento das Vulnerabilidades
 ### Exploração
-**Coleta de informações relavantes:** 
+**Coleta de informações relevantes:** 
 
 **I -** Varredura da Rede com objetivo de descobrir o IP do host alvo.
 <img align="center"  
@@ -114,7 +114,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
 ### Preparação
 **Criando as word list:** 
 
-**I -** Possiveis usuarios e senhas.
+**I -** Possíveis usuários  e senhas.
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 004612.png"
     >
@@ -122,7 +122,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
 
 ### V‑001 Brute Force no serviço FTP
 **Descrição:**  
-**I -** Usando a Medusa para realizar as cobinações de forma automatizada.
+**I -** Usando a Medusa para realizar as combinações de forma automatizada.
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 004654.png"
     >
@@ -132,7 +132,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
     src="./images/Captura de tela 2025-11-10 004811.png"
     >
 
-**III -** Analizando o resultado temos a cobinação de msfadmin para usuario e senha com sucesso.
+**III -** Analisando o resultado temos a combinação de msfadmin para usuário e senha com sucesso.
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 004811.png"
     >
@@ -154,12 +154,12 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
 
 ### V‑002 Brute Force no servidor Web
 **Descrição:** 
-**I -** Analizando a Resquest do metodo POST e o retorno do login.
+**I -** Analisando a Resquest do método POST e o retorno do login.
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 005942.png"
     >
 
-**II -** Realizando ataque novamente com a medusa e as word lists e analizando o resultado.
+**II -** Realizando ataque novamente com a medusa e as word lists e analisando o resultado.
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 010342.png"
     >
@@ -172,7 +172,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
 
 ### V‑003 Brute Force no serviço de rede SMB
 **Descrição:** 
-**I -** Realizando a enumeração dos possiveis usuários.
+**I -** Realizando a enumeração dos possíveis usuários.
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 011716.png"
     >
@@ -181,7 +181,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
     src="./images/Captura de tela 2025-11-10 011802.png"
     >
 
-**II -** Criando uma nova word list com base na analize do resultado do Enum4linux.
+**II -** Criando uma nova word list com base na análise do resultado do Enum4linux.
 
 - Lista de Usuários:
 
@@ -195,7 +195,7 @@ V‑003 | 445 | SMB | Atque em Cadeia | Crítica | Confirmada | Exposição de d
     src="./images/Captura de tela 2025-11-10 171307.png"
     >
 
-**III -** Realizando ataque com a Medusa e analizando os resultados do teste.
+**III -** Realizando ataque com a Medusa e analisando os resultados do teste.
 
 <img align="center"  
     src="./images/Captura de tela 2025-11-10 172554.png"
