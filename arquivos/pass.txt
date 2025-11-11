@@ -1,0 +1,6 @@
+123456
+password
+qwrty
+admin
+root
+msfadmin
